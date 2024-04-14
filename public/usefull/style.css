@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../image/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    background-color: #FAEEFF;
+    font-family: 'work sans', 'san serif';
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container-content {
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 20px;
+}
+
+.sub-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.container.editor {
+    display: grid;
+    gap: 13px;
+    align-items: center;
+    grid-template-columns: 370px auto;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 600;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+button:hover {
+    color: purple;
+}
+
+.question-container .list-question:not(:last-child) {
+    border-bottom: 1px solid rgb(194, 184, 184);
+}
+
+.feedback {
+    padding-bottom: 10px;
+    color: gray;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+.editor {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+
+}
+
+.home,
+a {
+    position: fixed;
+    left: 95%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    margin-top: 20px;
+
+}
+
+.container-button{
+    display: flex;
+
+    gap: 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container-content {
+        max-width: 350px;
+    }
+
+    .container {
+        grid-template-columns: 230px auto;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .container-content {
+        max-width: 250px;
+    }
+
+    .container {
+        grid-template-columns: 140px auto;
+    }
+
+    .h4 {
+        font-size: 12px;
+    }
+
+    img.button-minus {
+        padding: 10px;
+    }
+
+    img.button-plus {
+        padding: 10px;
+    }
+}
+
