@@ -86,8 +86,8 @@ p {
 
 }
 
-.home,
-a {
+.home
+ {
     position: fixed;
     left: 95%;
     transform: translateX(-50%);
@@ -98,14 +98,80 @@ a {
     margin-top: 20px;
 
 }
-
+.home-btn{
+    position: fixed;
+    top: 10%;
+    left: 95%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
 .container-button{
     display: flex;
 
     gap: 10px;
 }
 
+.alert-success {
+    background-color: #dff0d8; /* Light green for success */
+    border-color: #d0e9c6; /* Light green border for consistency */
+    color: #3c763d; /* Darker green for text readability */
+    padding: 20px 16px; /* Adjust padding as needed */
 
+    border: 1px solid transparent; /* Reset default bootstrap border */
+    border-radius: 4px; /* Add subtle rounded corners */
+    width: 400px; /* Dynamic width based on content */
+
+    position: fixed;
+    top: 0%;
+    right: 0%;
+  }
+
+  .alert-success ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+
+
+  input[type="text"], input[type="hidden"] {
+    padding: 10px;
+    margin: 5px 0;
+    width: 200%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  edit[type="submit"] {
+    padding: 10px 20px;
+    background-color: #381949;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  edit[type="submit"]:hover {
+    background-color: #AD28EB;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #AD28EB;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color:  #381949;;
+  }
 @media only screen and (max-width: 600px) {
     .container-content {
         max-width: 350px;
@@ -138,4 +204,5 @@ a {
         padding: 10px;
     }
 }
+
 

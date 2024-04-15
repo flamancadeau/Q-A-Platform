@@ -10,7 +10,8 @@ class record extends Model
 {
     use HasFactory;
     protected $table = 'records';
-
+    protected $guarded = [];
+   protected $fillable = [];
 
 }
 

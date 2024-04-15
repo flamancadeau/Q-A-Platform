@@ -12,7 +12,7 @@ Route::get('/', function () {
     // Check if the $data variable is empty
     if ($data->isEmpty()) {
         // If there are no records, return a view with a message
-        return view('task.empty_result');
+        return view('Empty questions');
     } else {
         // If records are found, return the 'task.result' view
         return view('welcome', compact('data'));
@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 
-route::get('/index', function () {
+Route::get('/index', function () {
 
     return view('task.index');
 });
@@ -35,3 +35,14 @@ Route::post('/index', function () {
     return redirect('/')->with('success', 'Data saved successfully!');
 });
 
+Route::delete("/deleteRecord/{id}", [Answer::class, "deleteRecord"])->name("delete.record");
+
+Route::get('/record/{id}/edit', [Answer::class, 'edit']);
+
+// Route::GET('/record/{id}/edit',function(){
+
+//     return view('edit.update');
+// });
+
+
+Route::patch('/edit/update/{id}' , [Answer::class, 'update'])->name('edit.update');
