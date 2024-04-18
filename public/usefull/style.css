@@ -139,7 +139,7 @@ p {
   input[type="text"], input[type="hidden"] {
     padding: 10px;
     margin: 5px 0;
-    width: 200%;
+
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -172,6 +172,47 @@ p {
   .btn:hover {
     background-color:  #381949;;
   }
+
+
+  .custom-block {
+
+    border-radius: 0.25rem;
+
+    margin-bottom: 1rem;
+}
+.custom-input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.custom-button {
+    display: block;
+    background-color:#AD28EB;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.login{
+    width: 22px;
+        height: 22px;
+        position: fixed;
+        top: 66%;
+        right: 458px;
+
+        background-color: #3490dc;
+
+        border-radius: 40%; /* Make it a circle */
+        cursor: pointer;
+}
+
+#hidde{
+    display: none;
+}
 @media only screen and (max-width: 600px) {
     .container-content {
         max-width: 350px;

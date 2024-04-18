@@ -42,13 +42,20 @@
         <div class="list-question">
           <div class="container">
             <h4>{{ $record->question }}</h4>
-            <div class="container-button">
 
+<div clas="custom-button">
 
               <input type="hidden" name="id" id="edit" value="{{$record->id}}" id="id" />
               <input type="text" name="question" id="edit" value="{{$record->question}}" />
               <input type="text" name="answer" id="edit" value="{{$record->answer}}" />
-              <button type="submit" class="btn">send</button>
+              <button type="submit" class="custom-button">save</button>
+              <a href="{{ url('/') }}">
+            <img src="/image/turn-back.png" class="login" alt="">
+               </a>
+
+
+              </div>
+
 
 </form>
 </body>

@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/index', function () {
 
     return view('task.index');
-});
+})->middleware(["auth"])->name("Index");
 
 Route::post('/index', function () {
     $to_db = new record();
@@ -35,14 +35,29 @@ Route::post('/index', function () {
     return redirect('/')->with('success', 'Data saved successfully!');
 });
 
-Route::delete("/deleteRecord/{id}", [Answer::class, "deleteRecord"])->name("delete.record");
+Route::delete("/deleteRecord/{id}", [Answer::class, "deleteRecord"])
+->middleware(["auth"])
+->name("delete.record");
 
-Route::get('/record/{id}/edit', [Answer::class, 'edit']);
+Route::get('/record/{id}/edit', [Answer::class, 'edit'])
+->middleware(["auth"])
+->name("edit");
 
-// Route::GET('/record/{id}/edit',function(){
 
-//     return view('edit.update');
-// });
 
 
 Route::patch('/edit/update/{id}' , [Answer::class, 'update'])->name('edit.update');
+Route::get('/welcome', function () {
+    return view('/');
+});
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
+
+

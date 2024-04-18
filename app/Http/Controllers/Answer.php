@@ -43,9 +43,23 @@ public function update(Request $request, $id)
 
     return redirect('/')->with('success','Success updated!');
 }
+public function index()
+{
+    $data = record::all();
+
+    if ($data->count() > 0) {
+        $sortedData = $data->sortBy('id');
+        dd( $sortedData );
+        return view('/', compact('sortedData'));
+    } else {
+
+        return view('/', compact('noDataMessage', 'No records found!'));
+    }
+}
 
 
- }
 
 
 
+
+}

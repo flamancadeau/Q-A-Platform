@@ -14,7 +14,7 @@
 </head>
 <body>
   <a href="/index">
-    <button type="submit" class="home-btn" name="home">Home</button>
+    <button type="submit" class="home-btn" name="home">Add Question</button>
   </a>
   @if(session()->has('success'))
   <div class="alert alert-success ml-auto" style=" width: fit-content; background-color: #d4edda; ">
@@ -36,11 +36,11 @@
       <div class="question-container">
         @php
         // Sort data by ID
-        $sortedData = $data->sortBy('id');
+        $data=$data->sortBy('id');
         $previousId = null;
         @endphp
 
-        @foreach($sortedData as $record)
+        @foreach($data as $record)
         @if($record->id != $previousId)
         <form action="{{ route('delete.record', $record->id) }}" method="post">
         {{ method_field("DELETE") }}
@@ -50,6 +50,7 @@
             <h4> {{ $record->question }}</h4>
             <div class="container-button">
             <input type="hidden" name="record" value="{{ $record->id }}" id="record_id">
+            @if (auth()->check())
               <button class="button-delete" type="submit"   name="" >
                 <img src="/image/delete.png" class="editor"  alt="">
               </button>
@@ -57,9 +58,9 @@
               <a href="/record/{{$record->id}}/edit">
            <img src="/image/editor.png" class="editor" alt="">
            </a>
-
-              <button class="button-plus" type="submit"  value="" name="">
-                <img src="/image/add.png" class="editor" alt="">
+           @endif
+              <button class="button-plus" type="submit" id="hidde" value="" name="">
+                <img src="/image/add.png" type="" class="editor" id="hidde" alt="">
               </button>
             </div>
           </div>
@@ -80,3 +81,6 @@
 </body>
 
 </html>
+<style>
+  
+</style>
