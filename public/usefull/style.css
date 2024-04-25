@@ -1,0 +1,249 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../image/background-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 300px;
+    background-color: #FAEEFF;
+    font-family: 'work sans', 'san serif';
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.container-content {
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 20px;
+}
+
+.sub-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+.container.editor {
+    display: grid;
+    gap: 13px;
+    align-items: center;
+    grid-template-columns: 370px auto;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    font-weight: 600;
+    text-align: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+button:hover {
+    color: purple;
+}
+
+.question-container .list-question:not(:last-child) {
+    border-bottom: 1px solid rgb(194, 184, 184);
+}
+
+.feedback {
+    padding-bottom: 10px;
+    color: gray;
+}
+
+
+p {
+    font-size: 16px;
+}
+
+.editor {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+
+}
+
+.home
+ {
+    position: fixed;
+    left: 95%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    margin-top: 20px;
+
+}
+.home-btn{
+    position: fixed;
+    top: 10%;
+    left: 95%;
+    transform: translateX(-50%);
+    padding: 15px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+}
+.container-button{
+    display: flex;
+
+    gap: 10px;
+}
+
+.alert-success {
+    background-color: #dff0d8; /* Light green for success */
+    border-color: #d0e9c6; /* Light green border for consistency */
+    color: #3c763d; /* Darker green for text readability */
+    padding: 20px 16px; /* Adjust padding as needed */
+
+    border: 1px solid transparent; /* Reset default bootstrap border */
+    border-radius: 4px; /* Add subtle rounded corners */
+    width: 400px; /* Dynamic width based on content */
+
+    position: fixed;
+    top: 0%;
+    right: 0%;
+  }
+
+  .alert-success ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+
+
+  input[type="text"], input[type="hidden"] {
+    padding: 10px;
+    margin: 5px 0;
+
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  edit[type="submit"] {
+    padding: 10px 20px;
+    background-color: #381949;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  edit[type="submit"]:hover {
+    background-color: #AD28EB;
+  }
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #AD28EB;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color:  #381949;;
+  }
+
+
+  .custom-block {
+
+    border-radius: 0.25rem;
+
+    margin-bottom: 1rem;
+}
+.custom-input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.custom-button {
+    display: block;
+    background-color:#AD28EB;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.login{
+    width: 22px;
+        height: 22px;
+        position: fixed;
+        top: 66%;
+        right: 458px;
+
+        background-color: #3490dc;
+
+        border-radius: 40%; /* Make it a circle */
+        cursor: pointer;
+}
+
+#hidde{
+    display: none;
+}
+@media only screen and (max-width: 600px) {
+    .container-content {
+        max-width: 350px;
+    }
+
+    .container {
+        grid-template-columns: 230px auto;
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .container-content {
+        max-width: 250px;
+    }
+
+    .container {
+        grid-template-columns: 140px auto;
+    }
+
+    .h4 {
+        font-size: 12px;
+    }
+
+    img.button-minus {
+        padding: 10px;
+    }
+
+    img.button-plus {
+        padding: 10px;
+    }
+}
+
+
